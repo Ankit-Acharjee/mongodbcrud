@@ -14,7 +14,7 @@ const EditTopicForm = ({ id, title, description }) => {
 
     try {
       const res = await fetch(`${base_url}/api/topics/${id}`, {
-        method: "PATCH",
+        method: "PUT",
         headers: {
           "Content-type": "application/json",
         },
