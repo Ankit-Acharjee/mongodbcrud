@@ -2,6 +2,7 @@
 import { base_url } from "@/jsurl/baseurl";
 import { useRouter } from "next/navigation";
 import { HiOutlineTrash } from "react-icons/hi";
+import { toast } from "sonner";
 
 const RemoveBtn = ({ id }) => {
   const router = useRouter();
@@ -16,11 +17,15 @@ const RemoveBtn = ({ id }) => {
         router.refresh();
       }
     }
+    toast.success("Topic removed successfully");
   };
+
   return (
-    <button onClick={removeTopic} className="text-red-400">
-      <HiOutlineTrash size={24} />
-    </button>
+    <>
+      <button onClick={removeTopic} className="text-red-400">
+        <HiOutlineTrash size={24} />
+      </button>
+    </>
   );
 };
 
