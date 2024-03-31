@@ -2,7 +2,7 @@
 import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
 import { HiPencilAlt } from "react-icons/hi";
-import { base_url } from "@/jsurl/baseurl";
+import { base_url } from "@/utils/baseurl";
 // import { useEffect } from "react";
 
 const getTopics = async () => {
@@ -25,17 +25,20 @@ const getTopics = async () => {
 
 const TopicsList = async () => {
   const { topics } = await getTopics();
-  // console.log(topics?.json());
+  // console.log(topics);
   return (
     <>
-      {topics?.map((t, index) => {
+      {topics && topics?.map((t) => {
         return (
           <div
-            key={index}
+            key={t._id}
             className="p-4 shadow-lg rounded-md border border-slate-300 my-3 flex justify-between gap-5 items-start"
           >
             <div>
               <h2 className="font-bold text-xl">{t?.title}</h2>
+              {/* {
+                console.log(t?.title)
+              } */}
               <div>{t?.description}</div>
             </div>
 

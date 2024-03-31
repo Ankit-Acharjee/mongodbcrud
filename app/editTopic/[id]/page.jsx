@@ -1,5 +1,5 @@
 import EditTopicForm from "@/components/EditTopicForm";
-import { base_url } from "@/jsurl/baseurl";
+import { base_url } from "@/utils/baseurl";
 
 const getTopicById = async (id) => {
   try {

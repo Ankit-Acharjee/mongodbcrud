@@ -1,5 +1,5 @@
 "use client";
-import { base_url } from "@/jsurl/baseurl";
+import { base_url } from "@/utils/baseurl";
 import { useRouter } from "next/navigation";
 import { HiOutlineTrash } from "react-icons/hi";
 import { toast } from "sonner";

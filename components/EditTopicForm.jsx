@@ -1,6 +1,6 @@
 "use client";
 
-import { base_url } from "@/jsurl/baseurl";
+import { base_url } from "@/utils/baseurl";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
